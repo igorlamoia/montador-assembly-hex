@@ -26,7 +26,7 @@ public class Formatar {
             	}else {
             		formatar = false;
                 	//codigo.add(aux.concat(" ".concat(linha)));
-                	//codigo.add(aux.concat(linha)); OU ESSE PARA CONCATENAR SEM O ESPAÇO DEPOIS DO ":"
+                	//codigo.add(aux.concat(linha)); OU ESSE PARA CONCATENAR SEM O ESPAï¿½O DEPOIS DO ":"
             		codigo.add(linha);
             	}
             	
