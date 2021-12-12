@@ -13,9 +13,9 @@ sll $s7, $s7, 0x10
 sw $s0, 0($s7)
 lw $t2, 0($s7)
 slt $t0, $s4, $s6
-bne $t0, $zero, jump1
+bne $t0, $zero,3
 addi $s6, $s6, 0x1
 slti $t1, $s3, 0xAA
-beq $t1, $zero, jump2
+beq $t1, $zero,4
 sll $s3, $s3, 0x4
-j jump
+j 14

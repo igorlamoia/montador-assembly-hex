@@ -13,19 +13,10 @@ sll $s7, $s7, 0x10 # sdads
 sw $s0, 0($s7) # sdads
 lw $t2, 0($s7) # sdads
 jump: # sdads
- # sdads
- # sdads
-
-
-
-
 slt $t0, $s4, $s6 # sdads
 bne $t0, $zero, jump1 # sdads
 addi $s6, $s6, 0x1 # sdads
 jump1: # sdads
- # sdads
-#teste # sdads
- # sdads
 slti $t1, $s3, 0xAA # sdads
 beq $t1, $zero, jump2 # sdads
 sll $s3, $s3, 0x4 # sdads
