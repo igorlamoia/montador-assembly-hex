@@ -4,7 +4,13 @@
 
 ---
 
-## CONSIDERAÇÕES:
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/igorlamoia/montador-assembly-hex/blob/main/LICENSE)
+
+ <p align="center">
+ <a href="#Considerações">Considerações</a>&nbsp;&nbsp; | <a href="#Imagens">Imagens</a>&nbsp;&nbsp; | <a href="#Tutorial">Tutorial</a>
+</p>
+
+## Considerações:
 
 1. No arquivo 'Convertendo para Hexa - Passo a Passo.txt' está todo o passo a passo para chegar no resultado hexadecimal de forma teórica
 2. O arquivo 'cod.asm' contém o codigo base usado, o mesmo deve ser aberto através do MARS
@@ -14,7 +20,7 @@
 
 ---
 
-## TUTORIAL PARA EXECUÇÃO DO ALGORITMO:
+## Tutorial
 
 - jdk ^17 recomendada
 - Como o algoritmo foi desenvolvido no Eclipse, recomenda-se que use a mesma IDE para manter o encode (Versões antigas podem gerar incompatibilidade).
@@ -42,3 +48,17 @@
 3. Executar com o F5
 
 ---
+
+# Imagens
+
+### Exemplo de códgio
+
+![Image declaracoes](./images/codigo.png)
+
+### Código formatado (sem comentário e sem linhas vazias)
+
+![Image declaracoes](./images/formatado.png)
+
+### Código final em HEX
+
+![Image declaracoes](./images/hexadecimal.png)
