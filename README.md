@@ -59,6 +59,4 @@
 
 ![Image declaracoes](./images/formatado.png)
 
-### Código final em HEX
-
-![Image declaracoes](./images/hexadecimal.png)
+alguma coisa
