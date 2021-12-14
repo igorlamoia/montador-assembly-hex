@@ -1,8 +1,9 @@
 ori $s0, $s0, 0x7
-or $s1, $zero, $s0
-addi $s0, $s0, 0x5
+or $s1, $zero, $s0 # Os comentários serão
+addi $s0, $s0, 0x5 # Retirados pelo Formatador
 add $s2, $s0, $s1
-sub $s3, $s0, $s1
+sub $s3, $s0, $s1 # Os espaços também
+
 xori $s4, $s3, 0xA3
 xor $s5, $s3, $s2
 and $s6, $s4, $s5
