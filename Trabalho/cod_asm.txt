@@ -12,10 +12,18 @@ ori $s7, $zero, 0x1001
 sll $s7, $s7, 0x10
 sw $s0, 0($s7)
 lw $t2, 0($s7)
+jump1:
+
+
 slt $t0, $s4, $s6
-bne $t0, $zero,3
+bne $t0, $zero, jump2
 addi $s6, $s6, 0x1
+jump2:
+
+#teste
+
 slti $t1, $s3, 0xAA
-beq $t1, $zero,4
+beq $t1, $zero, jump3
 sll $s3, $s3, 0x4
-j 14
+j jump1
+jump3:
