@@ -1,7 +1,7 @@
 public class Converter {
 	
-	//Recebe um número binário armazenado no formato de string
-	//Retorna o número hexadecimal referente, também no formato de string
+	//Recebe um nï¿½mero binï¿½rio armazenado no formato de string
+	//Retorna o nï¿½mero hexadecimal referente, tambï¿½m no formato de string
 	
 	public static String binParaHexa(String binario) {
 		
@@ -37,11 +37,10 @@ public class Converter {
 		
 	}
 	
-	//Recebe um número hexadecimal armazenado no formato de string
-	//Retorna o número binário referente também no formato de string, caso necessário, completa o número binário de modo a ter 16 bits ao final
+	//Recebe um nï¿½mero hexadecimal armazenado no formato de string
+	//Retorna o nï¿½mero binï¿½rio referente tambï¿½m no formato de string, caso necessï¿½rio, completa o nï¿½mero binï¿½rio de modo a ter 16 bits ao final
 	
 	public static String hexaParaBin_16bits(String hexa) {
-		
 		String bin = "";
 		hexa = hexa.toUpperCase();
 		
@@ -49,49 +48,11 @@ public class Converter {
 			bin = bin.concat("0000");
 		}
 		
-		
-		for (int i=0 ; i<hexa.length() ; i++) {
-			if (hexa.charAt(i) == '0') {
-				bin = bin.concat("0000");
-			}else if (hexa.charAt(i) == '1') {
-				bin = bin.concat("0001");
-			}else if (hexa.charAt(i) == '2') {
-				bin = bin.concat("0010");
-			}else if (hexa.charAt(i) == '3') {
-				bin = bin.concat("0011");
-			}else if (hexa.charAt(i) == '4') {
-				bin = bin.concat("0100");
-			}else if (hexa.charAt(i) == '5') {
-				bin = bin.concat("0101");
-			}else if (hexa.charAt(i) == '6') {
-				bin = bin.concat("0110");
-			}else if (hexa.charAt(i) == '7') {
-				bin = bin.concat("0111");
-			}else if (hexa.charAt(i) == '8') {
-				bin = bin.concat("1000");
-			}else if (hexa.charAt(i) == '9') {
-				bin = bin.concat("1001");
-			}else if (hexa.charAt(i) == 'A') {
-				bin = bin.concat("1010");
-			}else if (hexa.charAt(i) == 'B') {
-				bin = bin.concat("1011");
-			}else if (hexa.charAt(i) == 'C') {
-				bin = bin.concat("1100");
-			}else if (hexa.charAt(i) == 'D') {
-				bin = bin.concat("1101");
-			}else if (hexa.charAt(i) == 'E') {
-				bin = bin.concat("1110");
-			}else if (hexa.charAt(i) == 'F') {
-				bin = bin.concat("1111");
-			}
-		}
-		
-		return bin;
-		
+		return stringHexParaBin(bin, hexa);
 	}
 	
-	//Recebe um número hexadecimal armazenado no formato de string
-	//Retorna o número binário referente também no formato de string, caso necessário, completa o número binário de modo a ter 26 bits ao final
+	//Recebe um nï¿½mero hexadecimal armazenado no formato de string
+	//Retorna o nï¿½mero binï¿½rio referente tambï¿½m no formato de string, caso necessï¿½rio, completa o nï¿½mero binï¿½rio de modo a ter 26 bits ao final
 	//Usado para o 'j'
 
 	public static String hexaParaBin_26bits(String hexa) {
@@ -99,58 +60,18 @@ public class Converter {
 		String bin = "00";
 		hexa = hexa.toUpperCase();
 		
-		for (int i=(6-hexa.length()) ; i>0 ; i--) {
+		for (int i=(6-hexa.length()) ; i > 0 ; i--)
 			bin = bin.concat("0000");
-		}
-		
-		
-		for (int i=0 ; i<hexa.length() ; i++) {
-			if (hexa.charAt(i) == '0') {
-				bin = bin.concat("0000");
-			}else if (hexa.charAt(i) == '1') {
-				bin = bin.concat("0001");
-			}else if (hexa.charAt(i) == '2') {
-				bin = bin.concat("0010");
-			}else if (hexa.charAt(i) == '3') {
-				bin = bin.concat("0011");
-			}else if (hexa.charAt(i) == '4') {
-				bin = bin.concat("0100");
-			}else if (hexa.charAt(i) == '5') {
-				bin = bin.concat("0101");
-			}else if (hexa.charAt(i) == '6') {
-				bin = bin.concat("0110");
-			}else if (hexa.charAt(i) == '7') {
-				bin = bin.concat("0111");
-			}else if (hexa.charAt(i) == '8') {
-				bin = bin.concat("1000");
-			}else if (hexa.charAt(i) == '9') {
-				bin = bin.concat("1001");
-			}else if (hexa.charAt(i) == 'A') {
-				bin = bin.concat("1010");
-			}else if (hexa.charAt(i) == 'B') {
-				bin = bin.concat("1011");
-			}else if (hexa.charAt(i) == 'C') {
-				bin = bin.concat("1100");
-			}else if (hexa.charAt(i) == 'D') {
-				bin = bin.concat("1101");
-			}else if (hexa.charAt(i) == 'E') {
-				bin = bin.concat("1110");
-			}else if (hexa.charAt(i) == 'F') {
-				bin = bin.concat("1111");
-			}
-		}
-		
-		return bin;
-		
+	
+		return stringHexParaBin(bin, hexa);
 	}
 	
-	//Recebe um número hexadecimal armazenado no formato de string
-	//Retorna o número binário referente também no formato de string, caso necessário, completa o número binário de modo a ter 5 bits ao final
-	//Usado para o 'SHAMT' presente em algumas instruções
+	//Recebe um nï¿½mero hexadecimal armazenado no formato de string
+	//Retorna o nï¿½mero binï¿½rio referente tambï¿½m no formato de string, caso necessï¿½rio, completa o nï¿½mero binï¿½rio de modo a ter 5 bits ao final
+	//Usado para o 'SHAMT' presente em algumas instruï¿½ï¿½es
 
 
 	public static String hexaParaBin_5bits(String hexa) {
-
 		String bin = "";
 		hexa = hexa.toUpperCase();
 		int i=0;
@@ -162,44 +83,73 @@ public class Converter {
 			i++;
 		}
 		
-		for ( ; i<hexa.length() ; i++) {
-			if (hexa.charAt(i) == '0') {
-				bin = bin.concat("0000");
-			}else if (hexa.charAt(i) == '1') {
-				bin = bin.concat("0001");
-			}else if (hexa.charAt(i) == '2') {
-				bin = bin.concat("0010");
-			}else if (hexa.charAt(i) == '3') {
-				bin = bin.concat("0011");
-			}else if (hexa.charAt(i) == '4') {
-				bin = bin.concat("0100");
-			}else if (hexa.charAt(i) == '5') {
-				bin = bin.concat("0101");
-			}else if (hexa.charAt(i) == '6') {
-				bin = bin.concat("0110");
-			}else if (hexa.charAt(i) == '7') {
-				bin = bin.concat("0111");
-			}else if (hexa.charAt(i) == '8') {
-				bin = bin.concat("1000");
-			}else if (hexa.charAt(i) == '9') {
-				bin = bin.concat("1001");
-			}else if (hexa.charAt(i) == 'A') {
-				bin = bin.concat("1010");
-			}else if (hexa.charAt(i) == 'B') {
-				bin = bin.concat("1011");
-			}else if (hexa.charAt(i) == 'C') {
-				bin = bin.concat("1100");
-			}else if (hexa.charAt(i) == 'D') {
-				bin = bin.concat("1101");
-			}else if (hexa.charAt(i) == 'E') {
-				bin = bin.concat("1110");
-			}else if (hexa.charAt(i) == 'F') {
-				bin = bin.concat("1111");
-			}
-		}
+		for ( ; i<hexa.length() ; i++)
+			bin = switchCharHexParaBin(hexa.charAt(i), bin);
 		
 		return bin;
 		
-		}
-	
 	}
+	
+	public static String stringHexParaBin(String bin, String hexa) {
+		for (int i=0 ; i<hexa.length() ; i++)
+			bin = switchCharHexParaBin(hexa.charAt(i), bin);
+		return bin;
+	}
+
+	public static String switchCharHexParaBin(char digito, String bin) {
+		switch (digito) {
+			case '0':
+				bin = bin.concat("0000");
+				break;
+			case '1':
+				bin = bin.concat("0001");
+				break;
+			case '2':
+				bin = bin.concat("0010");
+				break;
+			case '3':
+				bin = bin.concat("0011");
+				break;
+			case '4':
+				bin = bin.concat("0100");
+				break;
+			case '5':
+				bin = bin.concat("0101");
+				break;
+			case '6':
+				bin = bin.concat("0110");
+				break;
+			case '7':
+				bin = bin.concat("0111");
+				break;
+			case '8':
+				bin = bin.concat("1000");
+				break;
+			case '9':
+				bin = bin.concat("1001");
+				break;
+			case 'A':
+				bin = bin.concat("1010");
+				break;
+			case 'B':
+				bin = bin.concat("1011");
+				break;
+			case 'C':
+				bin = bin.concat("1100");
+				break;
+			case 'D':
+				bin = bin.concat("1101");
+				break;
+			case 'E':
+				bin = bin.concat("1110");
+				break;
+			case 'F':
+				bin = bin.concat("1111");
+				break;
+			default:
+				break;
+		}
+		return bin;
+	}
+
+}
